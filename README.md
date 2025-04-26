@@ -102,6 +102,25 @@ A **Pygame-based visualization** of a **singly linked list** where each node con
 
 ---
 
+### 🧩 Main Todo 1.2: LinkedList Class (core/linked_list.py)
+
+- [ ]  **Subtodo: Signature**
+    - Create `LinkedList` class with:
+        - `self.head`
+        - `self.current`
+- [ ]  **Subtodo: Purpose**
+    - "Manages singly linked list of trivia questions."
+- [ ]  **Subtodo: Stub**
+    - Create empty constructor `__init__`.
+- [ ]  **Subtodo: Unit Test (tests/test_linked_list.py)**
+    - Test initialization (`head` is `None`).
+- [ ]  **Subtodo: Run Test**
+- [ ]  **Subtodo: Implement LinkedList Constructor**
+
+---
+
+
+
 ## **Phase 2: CLI User Interface**
 
 ## **Phase 3: CLI Testing Improvement**
