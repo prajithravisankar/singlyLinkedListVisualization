@@ -81,7 +81,7 @@ A **Pygame-based visualization** of a **singly linked list** where each node con
 
 ### 🧩 Main Todo 1.1: Node Class (core/node.py)
 
-- [ ]  **Subtodo: Signature**
+- [x]  **Subtodo: Signature**
     - Write constructor signature:
     
     ```python
@@ -89,15 +89,15 @@ A **Pygame-based visualization** of a **singly linked list** where each node con
     
     ```
     
-- [ ]  **Subtodo: Purpose**
+- [x]  **Subtodo: Purpose**
     - Describe: "Represents a trivia question node with data and next pointer."
-- [ ]  **Subtodo: Stub**
+- [x]  **Subtodo: Stub**
     - Create `Node` class with attributes set to dummy values.
-- [ ]  **Subtodo: Unit Test (tests/test_node.py)**
+- [x]  **Subtodo: Unit Test (tests/test_node.py)**
     - Test node creation.
-- [ ]  **Subtodo: Run Test**
+- [x]  **Subtodo: Run Test**
     - Tests should fail.
-- [ ]  **Subtodo: Implement Node Class**
+- [x]  **Subtodo: Implement Node Class**
     - Real code to initialize attributes: `question`, `answer`, `is_correct`, `next = None`.
 
 ---
