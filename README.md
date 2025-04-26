@@ -54,3 +54,58 @@ A **Pygame-based visualization** of a **singly linked list** where each node con
 | 1 | Who is the current US president? | Kamala Harris | ❌ | **🗑️ Delete** | +1 point |
 | 2 | Fastest land animal? | Cheetah | ✅ | **✓ Correct** | +1 point |
 | 3 | Largest planet? | Jupiter | ✅ | **→ Move Right** | No points (missed opportunity cannot go back because singly linked list) |
+
+---
+
+## **Phase 0: Project & Environment Setup**
+
+## **Phase 0: Project & Environment Setup**
+
+- [x]  Create `trivia_game/` folder.
+- [x]  Set up a virtual environment (`python -m venv venv`).
+- [x]  Install dependencies:
+    - [x]  `pip install pygame`
+    - [x]  `pip install pytest`
+- [x]  Create project file structure as shown.
+- [x]  Initialize Git repository (optional but recommended).
+- [x]  Create empty `requirements.txt` (`pip freeze > requirements.txt`).
+
+## **Phase 1: Core Data Structures (Node & Linked List Classes)**
+
+### 📚 Study Reminder Before Phase 1
+
+- [x]  Review **classes, attributes, constructors** in Python.
+- [ ]  Review **basic linked lists** (singly linked).
+
+---
+
+### 🧩 Main Todo 1.1: Node Class (core/node.py)
+
+- [ ]  **Subtodo: Signature**
+    - Write constructor signature:
+    
+    ```python
+    # Node(question: str, answer: str, is_correct: bool) -> Node
+    
+    ```
+    
+- [ ]  **Subtodo: Purpose**
+    - Describe: "Represents a trivia question node with data and next pointer."
+- [ ]  **Subtodo: Stub**
+    - Create `Node` class with attributes set to dummy values.
+- [ ]  **Subtodo: Unit Test (tests/test_node.py)**
+    - Test node creation.
+- [ ]  **Subtodo: Run Test**
+    - Tests should fail.
+- [ ]  **Subtodo: Implement Node Class**
+    - Real code to initialize attributes: `question`, `answer`, `is_correct`, `next = None`.
+
+---
+
+## **Phase 2: CLI User Interface**
+
+## **Phase 3: CLI Testing Improvement**
+
+## **Phase 4: Visualization with Pygame (ui/pygame_ui.py)**
+
+## **Phase 5: Final Polish**
