@@ -151,23 +151,23 @@ For each method:
 
 ### ➡️ move_right(self) -> None
 
-- [ ]  Signature
-- [ ]  Purpose: Move current pointer one step right.
-- [ ]  Stub
-- [ ]  Unit Test
-- [ ]  Run Test
-- [ ]  Implement
+- [x]  Signature
+- [x]  Purpose: Move current pointer one step right.
+- [x]  Stub
+- [x]  Unit Test
+- [x]  Run Test
+- [x]  Implement
 
 ---
 
 ### ➡️ is_empty(self) -> bool
 
-- [ ]  Signature
-- [ ]  Purpose: Check if list is empty.
-- [ ]  Stub
-- [ ]  Unit Test
-- [ ]  Run Test
-- [ ]  Implement
+- [x]  Signature
+- [x]  Purpose: Check if list is empty.
+- [x]  Stub
+- [x]  Unit Test
+- [x]  Run Test
+- [x]  Implement
 
 ---
 

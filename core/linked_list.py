@@ -54,3 +54,17 @@ class LinkedList:
             self.current = prev.next
         else:
             self.current = prev
+
+    def move_right(self) -> None:
+        """Move the current pointer to the right."""
+        if self.current is None or self.current.next is None:
+            self.current = None
+        else:
+            self.current = self.current.next
+
+    def is_empty(self) -> bool:
+        """check if the linked list is empty"""
+        if self.head is None:
+            return True
+        else:
+            return False

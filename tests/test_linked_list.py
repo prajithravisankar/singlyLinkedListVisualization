@@ -49,3 +49,38 @@ def test_delete_current_node():
     linked_list.delete_current_node()
     assert linked_list.head is None, "there are no more questions left in the list"
     assert linked_list.current is None, "there are no more questions left in the list"
+
+def test_move_right():
+    """test that moving right updates the current node"""
+    linked_list = LinkedList()
+
+    # adding questions
+    linked_list.add_question("q1", "a1", True)
+    linked_list.add_question("q2", "a2", False)
+    linked_list.add_question("q3", "a3", True)
+    linked_list.add_question("q4", "a4", True)
+    linked_list.add_question("q5", "a5", False)
+    linked_list.add_question("q6", "a6", False)
+
+    linked_list.current = linked_list.head
+
+    assert linked_list.head.question == "q1", "first question is q1"
+    linked_list.move_right()
+    assert linked_list.current.question == "q2", "current question is q2 after moving right"
+    linked_list.move_right()
+    assert linked_list.current.question == "q3", "current question is q3 after moving right"
+    linked_list.move_right()
+    assert linked_list.current.question == "q4", "current question is q4 after moving right"
+    linked_list.move_right()
+    assert linked_list.current.question == "q5", "current question is q5 after moving right"
+    linked_list.move_right()
+    assert linked_list.current.question == "q6", "current question is q6 after moving right"
+    linked_list.move_right()
+    assert linked_list.current is None, "current should be None after moving right from last node"
+
+def test_is_empty():
+    """test that is_empty returns correctly if the linked list is empty or not"""
+    linked_list = LinkedList()
+    assert linked_list.is_empty() is True, "is_empty should be True"
+    linked_list.add_question("q1", "a1", True)
+    assert linked_list.is_empty() is False, "is_empty should be False"
