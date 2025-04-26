@@ -75,7 +75,7 @@ A **Pygame-based visualization** of a **singly linked list** where each node con
 ### 📚 Study Reminder Before Phase 1
 
 - [x]  Review **classes, attributes, constructors** in Python.
-- [ ]  Review **basic linked lists** (singly linked).
+- [x]  Review **basic linked lists** (singly linked).
 
 ---
 
@@ -116,6 +116,58 @@ A **Pygame-based visualization** of a **singly linked list** where each node con
     - Test initialization (`head` is `None`).
 - [x]  **Subtodo: Run Test**
 - [x]  **Subtodo: Implement LinkedList Constructor**
+
+---
+
+### 🧩 Main Todo 1.3: Implement LinkedList Methods
+
+For each method:
+
+(Signature → Purpose → Stub → Test → Run → Implement)
+
+---
+
+### ➡️ add_question(self, question: str, answer: str, is_correct: bool) -> None
+
+- [x]  Signature
+- [x]  Purpose: Add a new node at end of the list.
+- [x]  Stub
+- [x]  Unit Test (adding nodes grows list)
+- [x]  Run Test
+- [x]  Implement
+
+---
+
+### ➡️ delete_current_node(self) -> None
+
+- [x]  Signature
+- [x]  Purpose: Remove current node, move to next node.
+- [x]  Stub
+- [x]  Unit Test (deleting nodes adjusts links correctly)
+- [x]  Run Test
+- [x]  Implement
+
+---
+
+### ➡️ move_right(self) -> None
+
+- [ ]  Signature
+- [ ]  Purpose: Move current pointer one step right.
+- [ ]  Stub
+- [ ]  Unit Test
+- [ ]  Run Test
+- [ ]  Implement
+
+---
+
+### ➡️ is_empty(self) -> bool
+
+- [ ]  Signature
+- [ ]  Purpose: Check if list is empty.
+- [ ]  Stub
+- [ ]  Unit Test
+- [ ]  Run Test
+- [ ]  Implement
 
 ---
 

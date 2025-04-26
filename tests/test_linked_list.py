@@ -6,3 +6,46 @@ def test_linked_list_initialization():
     linked_list = LinkedList()
     assert linked_list.head is None, "New linked list head should be None"
     assert linked_list.current is None, "New linked list current should be None"
+
+def test_add_question_grows_list():
+    "Test that adding a question grows the list."
+    linked_list = LinkedList()
+
+    # initally, the list should be empyt
+    assert linked_list.head is None, "List should be empty initially"
+
+    # add first question
+    linked_list.add_question("q1", "a1", True)
+    assert linked_list.head is not None, "List should not be empty after adding a question"
+    assert linked_list.head.question == "q1", "First question should be q1"
+
+    # add second question
+    linked_list.add_question("q2", "a2", False)
+    assert linked_list.head.next is not None, "List should not be empty after adding a question"
+    assert linked_list.head.next.question == "q2", "second question should be q2"
+
+def test_delete_current_node():
+    """test that deleting the current node removes it"""
+    linked_list = LinkedList()
+
+    # adding questions
+    linked_list.add_question("q1", "a1", True)
+    linked_list.add_question("q2", "a2", False)
+    linked_list.add_question("q3", "a3", True)
+
+    linked_list.current = linked_list.head
+
+    # delete q1
+    assert linked_list.head.question == "q1", "first question before deleting is q1"
+    linked_list.delete_current_node()
+    assert linked_list.head.question == "q2", "first question after deleting once is q2"
+    assert linked_list.current == linked_list.head, "current should be at head after deleting the first node"
+
+    # delete q2
+    linked_list.delete_current_node()
+    assert linked_list.head.question == "q3", "first question after deleting twice is q3"
+
+    # delete q3
+    linked_list.delete_current_node()
+    assert linked_list.head is None, "there are no more questions left in the list"
+    assert linked_list.current is None, "there are no more questions left in the list"
