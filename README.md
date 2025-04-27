@@ -209,6 +209,15 @@ For each CLI function:
 
 ---
 
+### ➡️ cli_game_loop()
+
+- [ ]  Signature
+- [ ]  Purpose: Full CLI game loop (while list not empty).
+- [ ]  Stub
+- [ ]  Implement.
+
+---
+
 ## **Phase 3: CLI Testing Improvement**
 
 ## **Phase 4: Visualization with Pygame (ui/pygame_ui.py)**

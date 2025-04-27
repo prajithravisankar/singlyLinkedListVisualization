@@ -69,9 +69,54 @@ class TriviaGame:
                 self.score += 1
                 self.linked_list.move_right()
             else:
-                print("❌ Incorrect! The right answer was:", self.linked_list.current.answer, "no points")
+                print("❌ Incorrect! ", self.linked_list.current.answer, " no points")
                 self.linked_list.move_right()
 
     def display_score(self) -> None:
         """Displays the current game score."""
         print(f"\n⭐ Your Score: {self.score} points")
+
+def cli_game_loop(game: TriviaGame):
+    """Main game loop for the CLI trivia game."""
+    print("\n=== Trivia Trek Challenge ===")
+    print("Rules:")
+    print("- Delete (1) wrong answers (+1 point)")
+    print("- Skip (2) to next question")
+    print("- Confirm (3) correct answers (+1 point)\n")
+
+    load_questions(game)
+
+    while game.linked_list.current:
+        game.display_current_question()
+        game.handle_user_choice()
+
+        if game.linked_list.current is None:
+            break
+
+    # Game over summary
+    print("\n=== Game Results ===")
+    print(f"Final Score: {game.score}")
+
+
+def load_questions(game: TriviaGame):
+    """Loads a mix of true and false trivia questions"""
+    questions = [
+        # True questions (correct answers)
+        ("What is 2+2?", "4", True),
+        ("Capital of France?", "Paris", True),
+        ("Largest ocean?", "Pacific", True),
+        ("How many continents are there?", "7", True),
+        ("Chemical symbol for gold?", "Au", True),
+
+        # False questions (incorrect answers)
+        ("Capital of Canada?", "Toronto", False),  # Correct: Ottawa
+        ("Fastest land animal?", "Lion", False),  # Correct: Cheetah
+        ("Author of 'Romeo and Juliet'?", "Charles Dickens", False),  # Shakespeare
+        ("Largest planet in our solar system?", "Mars", False),  # Jupiter
+        ("What language is spoken in Brazil?", "Spanish", False)  # Portuguese
+    ]
+
+    for q, a, correct in questions:
+        game.linked_list.add_question(q, a, correct)
+
+    game.linked_list.current = game.linked_list.head  # Set starting point
