@@ -53,7 +53,7 @@ class LinkedList:
         if prev.next is not None:
             self.current = prev.next
         else:
-            self.current = prev
+            self.current = None
 
     def move_right(self) -> None:
         """Move the current pointer to the right."""
