@@ -171,9 +171,43 @@ For each method:
 
 ---
 
-
-
 ## **Phase 2: CLI User Interface**
+
+### 🧩 Main Todo 2.1: CLI Functions (ui/cli.py)
+
+For each CLI function:
+
+(Signature → Purpose → Stub → Test if possible → Implement)
+
+---
+
+### ➡️ display_current_question(linked_list: LinkedList) -> None
+
+- [x]  Signature
+- [x]  Purpose: Display the current question to the user.
+- [x]  Stub
+- [x]  (Hard to unit test CLI prints now — later capture stdout)
+- [x]  Implement
+
+---
+
+### ➡️ handle_user_choice(linked_list: LinkedList) -> None
+
+- [x]  Signature
+- [x]  Purpose: Let user decide to delete, move right, or confirm correct answer.
+- [x]  Stub
+- [x]  Implement basic logic.
+
+---
+
+### ➡️ display_score(score: int) -> None
+
+- [x]  Signature
+- [x]  Purpose: Show the user's score.
+- [x]  Stub
+- [x]  Implement.
+
+---
 
 ## **Phase 3: CLI Testing Improvement**
 
