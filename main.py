@@ -7,7 +7,7 @@ def main():
     game.linked_list.current = game.linked_list.head  # Start at first question
 
     # Start game
-    cli_game_loop(game)
+    game.cli_game_loop()
 
 if __name__ == "__main__":
     main()

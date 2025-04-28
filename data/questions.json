@@ -1,0 +1,9 @@
+[
+    {"question": "DNA stands for Dynamic Nucleic Acid?", "answer": "Yes", "isCorrect": false},
+    {"question": "Abraham Lincoln was the first president of the USA.", "answer": "Yes", "isCorrect": false},
+    {"question": "The Great Wall of China is visible from the Moon.", "answer": "Yes", "isCorrect": false},
+    {"question": "Amazon River is the longest river in the world.", "answer": "Yes", "isCorrect": false},
+    {"question": "Which empire was ruled by Mansa Musa?", "answer": "Mali Empire", "isCorrect": true},
+    {"question": "In what year did the Soviet Union collapse?", "answer": "1991", "isCorrect": true},
+    {"question": "What organ is primarily responsible for detoxifying blood?", "answer": "Liver", "isCorrect": true}
+]

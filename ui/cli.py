@@ -1,4 +1,5 @@
 from core.linked_list import LinkedList
+import json
 
 class TriviaGame:
     """
@@ -76,47 +77,33 @@ class TriviaGame:
         """Displays the current game score."""
         print(f"\n⭐ Your Score: {self.score} points")
 
-def cli_game_loop(game: TriviaGame):
-    """Main game loop for the CLI trivia game."""
-    print("\n=== Trivia Trek Challenge ===")
-    print("Rules:")
-    print("- Delete (1) wrong answers (+1 point)")
-    print("- Skip (2) to next question")
-    print("- Confirm (3) correct answers (+1 point)\n")
+    def load_questions(self):
+        """Loads a mix of true and false trivia questions"""
+        with open("data/questions.json") as file:
+            dictionary = json.load(file)
+        for trivia in dictionary:
+            self.linked_list.add_question(trivia['question'], trivia['answer'], trivia['isCorrect'])
+        self.linked_list.current = self.linked_list.head  # Set starting point
 
-    load_questions(game)
+    def cli_game_loop(self):
+        """Main game loop for the CLI trivia game."""
+        print("\n=== Trivia Trek Challenge ===")
+        print("Rules:")
+        print("- Delete (1) wrong answers (+1 point)")
+        print("- Skip (2) to next question")
+        print("- Confirm (3) correct answers (+1 point)\n")
 
-    while game.linked_list.current:
-        game.display_current_question()
-        game.handle_user_choice()
+        self.load_questions()
 
-        if game.linked_list.current is None:
-            break
+        while self.linked_list.current:
+            self.display_current_question()
+            self.handle_user_choice()
 
-    # Game over summary
-    print("\n=== Game Results ===")
-    print(f"Final Score: {game.score}")
+            if self.linked_list.current is None:
+                break
+
+        # Game over summary
+        print("\n=== Game Results ===")
+        print(f"Final Score: {self.score}")
 
 
-def load_questions(game: TriviaGame):
-    """Loads a mix of true and false trivia questions"""
-    questions = [
-        # True questions (correct answers)
-        ("What is 2+2?", "4", True),
-        ("Capital of France?", "Paris", True),
-        ("Largest ocean?", "Pacific", True),
-        ("How many continents are there?", "7", True),
-        ("Chemical symbol for gold?", "Au", True),
-
-        # False questions (incorrect answers)
-        ("Capital of Canada?", "Toronto", False),  # Correct: Ottawa
-        ("Fastest land animal?", "Lion", False),  # Correct: Cheetah
-        ("Author of 'Romeo and Juliet'?", "Charles Dickens", False),  # Shakespeare
-        ("Largest planet in our solar system?", "Mars", False),  # Jupiter
-        ("What language is spoken in Brazil?", "Spanish", False)  # Portuguese
-    ]
-
-    for q, a, correct in questions:
-        game.linked_list.add_question(q, a, correct)
-
-    game.linked_list.current = game.linked_list.head  # Set starting point
